@@ -1,0 +1,8 @@
+{% if filmInfo_list %}
+    <ul>
+        <li><a href="{% url 'filmInfo:duration' %}">"Sort by duration"</a></li>
+	    <li><a href="{% url 'filmInfo:release' %}">"Sort by release"</a></li>
+	</ul>
+{% else %}
+    <p>No film news available.</p>
+{% endif %}

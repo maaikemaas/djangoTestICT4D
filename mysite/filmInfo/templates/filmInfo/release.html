@@ -1,0 +1,10 @@
+{% if filmInfo_list %}
+{% block title %}Films sorted by release date {% endblock %}
+    <ul>
+    {% for filmInfo in filmInfo_list %}
+        <li>{{ filmInfo.releaseDate }}: {{filmInfo.filmTitle}} - {{filmInfo.director}}  ({{ filmInfo.duration }} minuten) </a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>There are no films in the database.</p>
+{% endif %}
