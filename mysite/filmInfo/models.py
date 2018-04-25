@@ -11,6 +11,7 @@ class FilmInfo(models.Model):
 	
     def __str__(self):
         return self.filmTitle
-		
-     def was_released_before_2000(self):
-         return releaseDate < 2000
+
+
+    def was_released_before_2000(self):
+        return self.releaseDate < 2000
